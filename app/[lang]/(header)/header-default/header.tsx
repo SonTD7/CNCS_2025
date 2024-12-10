@@ -46,7 +46,7 @@ function Header() {
         >
             <header className="header-main w-full bg-white dark:bg-black flex justify-between lg:justify-start items-center transition-all top-0 fixed max-h-20 z-30 bg-popover text-popover-foreground">
                 <div className="w-full flex space-x-11 justify-between 1lg:justify-start container items-center relative h-20">
-                    <Link title="Logo" href="/" className="flex space-x-5 justify-center items-center">
+                    <Link title="Logo" href="/" className="flex space-x-5 items-center">
                         <span className={cn(
                             "font-bold capitalize text-xl xl:text-2xl text-indigo-700 dark:text-white flex 1-tracking-widest",
                             fahkwang.className
