@@ -8,7 +8,6 @@ interface Route {
 
 export default function RouteBox({ data }: { data: Route }) {
     const { title } = data
-    console.log(title)
     return (
         <section>
             <div className="h-full  py-5 xl:py-10">

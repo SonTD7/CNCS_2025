@@ -1,0 +1,82 @@
+@import "./styles/base.css";
+@import "./styles/components.css";
+@import "./styles/utilities.css";
+
+
+.scrollbar-track {
+    @apply !z-[20];
+}
+.scrollbar-track-y {
+    @apply !w-1 xl:!w-2;
+}
+
+/* Article post */
+.post-article {
+    &::before {
+        content: "";
+        position: absolute;
+        left: -100vw;
+        right: -100vw;
+        bottom: 0px;
+        height: 50%;
+        background-color: white;
+        z-index: 0;
+    }
+    @apply relative;
+}
+
+.content-entry {
+    section {
+        h2 {
+            @apply font-bold text-3xl xl:text-4xl xl:my-10;
+        }
+        figure {
+            table {
+                @apply !w-full;
+            }
+            th,
+            td,
+            tr {
+                @apply border;
+            }
+            @apply !w-full;
+        }
+        @apply dark:bg-slate-600
+    }
+    p {
+        @apply my-4;
+    }
+    @apply my-10;
+}
+
+article {
+    .description {
+        ul,
+        li {
+            @apply list-disc ml-2;
+        }
+    }
+}
+
+.content-entry-landing {
+    section {
+        h2 {
+            @apply font-bold text-3xl xl:text-4xl xl:my-10;
+        }
+        figure {
+            table {
+                @apply !w-full;
+            }
+            th,
+            td,
+            tr {
+                @apply border;
+            }
+            @apply !w-full;
+        }
+    }
+    p {
+        @apply my-4;
+    }
+    @apply my-0;
+}

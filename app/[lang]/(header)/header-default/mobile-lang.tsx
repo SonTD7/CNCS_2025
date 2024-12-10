@@ -1,11 +1,11 @@
 "use client"
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie"
-import { Vie } from "./[lang]/Vie";
-import { Us } from "./[lang]/Us";
-import  {Jp}  from "./[lang]/Jp";
+import { Vie } from "../[lang]/Vie";
+import { Us } from "../[lang]/Us";
+import  {Jp}  from "../[lang]/Jp";
 
-import DarkMode from "./(darkmode)/dark-mode";
+import DarkMode from "../(darkmode)/dark-mode";
 
 export default function MobileLang() {
     const router = useRouter();

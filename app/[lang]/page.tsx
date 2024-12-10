@@ -2,9 +2,9 @@
 import { Metadata } from "next";
 import { FALLBACK_SEO } from "@/app/[lang]/utils/constants";
 import LangRedirect from "./components/LangRedirect"
-import componentResolver from './utils/component-resolver';
 import { getPageBySlug } from "@/app/[lang]/utils/get-page-by-slug";
 import componentResolverRoute from './utils/component-resolver-route';
+import SamepleData from "./(home)/sample-data";
 
 type Props = {
   params: {
@@ -16,7 +16,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = await getPageBySlug(params.slug, params.lang);
 
-  if (!page.data[0]?.seo) return FALLBACK_SEO;
+  if (!page.data[0]?.seo1) return FALLBACK_SEO;
   const metadata = page.data[0].seo
 
   return {
@@ -100,7 +100,7 @@ export default async function RootRoute({ params }: { params: { lang: string } }
       }
     }
 
-    const page = await getPageBySlug('home', params.lang, populateHomeRe)
+    const page = await getPageBySlug('home1', params.lang, populateHomeRe)
 
     if (page.error && page.error.status == 401) {
       throw new Error(
@@ -109,14 +109,11 @@ export default async function RootRoute({ params }: { params: { lang: string } }
       return null
     }
       
-    
     if (page.data.length == 0 && params.lang !== 'vi') return <LangRedirect />
-    if (page.data.length === 0) return null
+    if (page.data.length === 0) return <SamepleData /> //null
     const contentSections = page.data[0].contentSections
     return contentSections.map((section: any, index: number) =>
-      // componentResolver(section, index)
       componentResolverRoute(section, index, "home")
-
     )
 
   } catch (error: any) {

@@ -20,7 +20,7 @@ export default function Loader() {
 
     return (
         <div className={cn(
-            "w-screen h-screen fixed top-0 left-0 z-50 bg-background justify-center items-center",
+            "w-screen h-screen fixed top-0 left-0 z-50 1bg-background bg-white dark:bg-black justify-center items-center",
             !isLoading ? "hidden" : "flex"
         )}  >
             <Image

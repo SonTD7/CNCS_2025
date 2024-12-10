@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/gradient.js", "postcss.config.mjs", "app/[lang]/(home)/(images)/wave-svg.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "**/*.mjs", "components/gradient.js", "postcss.config.mjs", "app/[lang]/(home)/(images)/wave-svg.jsx"],
   "exclude": ["node_modules"]
 }

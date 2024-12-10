@@ -1,8 +1,6 @@
 export default function Product({
-    children,
     params
 }: {
-    children: React.ReactNode,
     params: {
         lang: string,
         slug: string

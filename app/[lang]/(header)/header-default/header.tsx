@@ -1,8 +1,7 @@
 "use client"
-import { useEffect, useState, useRef, memo } from "react";
+import { useState, useRef, memo } from "react";
 import { Fahkwang } from 'next/font/google'
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import _ from "lodash"
 import Link from "next/link";
 import { UseMediaQuery } from "@/hooks/use-media-query";
@@ -17,18 +16,6 @@ const fahkwang = Fahkwang({
 
 function Header() {
     const isDesktop = UseMediaQuery("(min-width: 1024px)");
-
-    useEffect(() => {
-        (
-            async () => {
-                const LocomotiveScroll = (await import('locomotive-scroll')).default
-                const locomotiveScroll = new LocomotiveScroll({
-                    scrollCallback: ScrollTrigger.update
-                });
-            }
-        )()
-    }, [])
-
     const [isHidden, setIsHidden] = useState(false);
     const { scrollY } = useScroll();
     const lastYRef = useRef(0);
