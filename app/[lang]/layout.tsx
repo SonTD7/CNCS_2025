@@ -1,25 +1,30 @@
-import { lazy } from "react";
-import RootLayout from "./(layout)/layout-smooth";
+import { ComponentType, lazy } from "react"
+import RootLayout from "./(layout)/layout-smooth"
+import { getDictionary } from "./dictionaries"
 
-const Lay = lazy(() => import("./(layout)/layout-default"));
-const data:string = "default";
-const LAYOUT_CONFIG = data ?? "smooth";
+const Lay: ComponentType<any> = lazy(() => import("./(layout)/layout-default"))
+const data: string = "default"
+const LAYOUT_CONFIG = data ?? "smooth"
 console.log("🚀 ~ LAYOUT_CONFIG:", LAYOUT_CONFIG)
 
-export default function Layout({
-    children,
-    params,
+export default async function Layout({
+	children,
+	params,
 }: Readonly<{
-    children: React.ReactNode;
-    params: { lang: string };
+	children: React.ReactNode
+	params: { lang: string }
 }>) {
-    return (
-        <>
-            {LAYOUT_CONFIG == "smooth" ? (
-                <RootLayout params={params}> {children} </RootLayout>
-            ) : (
-                <Lay params={params}> {children} </Lay>
-            )}
-        </>
-    );
+	const dicts = await getDictionary(params.lang)
+
+	return (
+		<>
+			{LAYOUT_CONFIG == "smooth" ? (
+				<RootLayout params={params}> {children} </RootLayout>
+			) : (
+				<Lay params={params} dicts={dicts}>
+					{children}
+				</Lay>
+			)}
+		</>
+	)
 }

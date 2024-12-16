@@ -4,3 +4,7 @@ import { twMerge } from "tailwind-merge"
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+
+export async function getMessages(locale: string) {
+	return await import(`@/dictionaries/${locale}.json`)
+}

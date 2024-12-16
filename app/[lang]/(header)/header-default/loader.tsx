@@ -3,7 +3,9 @@ import "./loading.css"
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
-export default function Loader() {
+
+export default function Loader({locale, dicts}: {locale: any, dicts: any}) {
+
     const [isLoading, setIsLoading] = useState(true);
     const handleLoading = () => {
         setIsLoading(false);
@@ -34,7 +36,7 @@ export default function Loader() {
                         <div className="aurora__item"></div>
                     </div>
                 </h1>
-                <p className="subtitle">Lotusa workspaces.</p>
+                <p className="subtitle">{dicts && dicts.global.loader.description}.</p>
             </div>
         </div>
     );

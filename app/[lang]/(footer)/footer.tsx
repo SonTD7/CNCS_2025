@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function footer() {
+export default function footer({locale, dicts}: {locale: any, dicts: any}) {
     return (
         <footer className="w-full dark:bg-black dark:text-white">
             <div className="container">
@@ -12,6 +12,7 @@ export default function footer() {
                         </span>
                     </Link>
                         <p className="py-8 text-sm text-gray-500 lg:max-w-xs text-center lg:text-left">
+                        {dicts&& dicts.global.loader.description}
                             Trusted in more than 100 countries & 5 million
                             customers. Follow us on social media.
                         </p>

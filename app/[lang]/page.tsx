@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function RootRoute({ params }: { params: { lang: string } }) {
+
   try {
     const populateHomeRe = {
       contentSections: {
@@ -108,7 +109,7 @@ export default async function RootRoute({ params }: { params: { lang: string } }
       )
       return null
     }
-      
+
     if (page.data.length == 0 && params.lang !== 'vi') return <LangRedirect />
     if (page.data.length === 0) return <SamepleData /> //null
     const contentSections = page.data[0].contentSections
@@ -121,4 +122,6 @@ export default async function RootRoute({ params }: { params: { lang: string } }
       window.alert('Missing or invalid credentials')
     }
   }
+
+
 }
