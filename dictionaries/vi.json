@@ -6,5 +6,10 @@
         "loader": {
             "description": "Bộ Phận Kỹ Thuật DEV"
         }
+    },
+    "errors": {
+        "h1": "Có gì đó sai sai",
+        "h2": "Đọc thôn tin lỗi phía dưới",
+        "button_title": "Quay lại"
     }
 }

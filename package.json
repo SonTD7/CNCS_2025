@@ -20,6 +20,7 @@
     "@radix-ui/react-navigation-menu": "^1.2.0",
     "@radix-ui/react-popover": "^1.1.1",
     "@radix-ui/react-slot": "^1.1.0",
+    "@rive-app/react-canvas": "^4.17.4",
     "@smakss/react-scroll-direction": "^4.2.0",
     "@strapi/blocks-react-renderer": "^1.0.1",
     "@types/js-cookie": "^3.0.6",

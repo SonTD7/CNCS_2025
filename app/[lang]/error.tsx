@@ -3,7 +3,6 @@ import React from 'react';
 import Image from 'next/image'
 import ImageErr from '@/components/error/image-err';
 import LogoErr from '@/components/error/logo-err';
-// app/error.tsx
 
 interface ErrorProps {
     error: Error;
@@ -21,8 +20,8 @@ const ErrorPage: React.FC<ErrorProps> = ({ error, reset }) => {
                             <LogoErr />
                         </div>
                         <div className="mb-10 md:mb-20 text-gray-600 font-light">
-                            <h1 className="font-black uppercase text-3xl lg:text-5xl text-yellow-500 mb-10">Sai Link rồi</h1>
-                            <h1>Bạn đọc thông tin lỗi này: </h1>
+                            <h1 className="font-black uppercase text-3xl lg:text-5xl text-yellow-500 mb-10">Có gì đó sai sai</h1>
+                            <h2>Bạn đọc thông tin lỗi này: </h2>
                             <p>{error.message}</p>
                         </div>
                         <div className="mb-20 md:mb-0">
@@ -31,7 +30,7 @@ const ErrorPage: React.FC<ErrorProps> = ({ error, reset }) => {
                     </div>
                     <div className="w-full md:w-1/2 text-center">
                         <ImageErr />
-                        <a href="https://www.freepik.com/vectors/business" target="_blank" className="text-xs text-gray-300">Business vector created by pikisuperstar - www.freepik.com</a>
+                        <a href="https://www.freepik.com/vectors/business" target="_blank" className="text-xs text-gray-300">Lotus*A Wordspaces</a>
                     </div>
                 </div>
                 <div className="w-64 md:w-96 h-96 md:h-full bg-blue-200 bg-opacity-30 absolute -top-64 md:-top-96 right-20 md:right-32 rounded-full pointer-events-none -rotate-45 transform"></div>

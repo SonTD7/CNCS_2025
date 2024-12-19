@@ -1,10 +1,10 @@
 
 import { Metadata } from "next";
-import { FALLBACK_SEO } from "@/app/[lang]/utils/constants";
-import LangRedirect from "./components/LangRedirect"
-import { getPageBySlug } from "@/app/[lang]/utils/get-page-by-slug";
-import componentResolverRoute from './utils/component-resolver-route';
-import SamepleData from "./(home)/sample-data";
+import { FALLBACK_SEO } from "@/app/[lang]/_utils/constants";
+import LangRedirect from "./_components/LangRedirect"
+import { getPageBySlug } from "@/app/[lang]/_utils/get-page-by-slug";
+import componentResolverRoute from './_utils/component-resolver-route';
+import SamepleData from "./(Pages)/sample-data";
 
 type Props = {
   params: {
@@ -13,17 +13,17 @@ type Props = {
   }
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const page = await getPageBySlug(params.slug, params.lang);
+// export async function generateMetadata({ params }: Props): Promise<Metadata> {
+//   const page = await getPageBySlug(params.slug, params.lang);
 
-  if (!page.data[0]?.seo1) return FALLBACK_SEO;
-  const metadata = page.data[0].seo
+//   if (!page.data[0]?.seo1) return FALLBACK_SEO;
+//   const metadata = page.data[0].seo
 
-  return {
-    title: metadata.metaTitle,
-    description: metadata.metaDescription
-  }
-}
+//   return {
+//     title: metadata.metaTitle,
+//     description: metadata.metaDescription
+//   }
+// }
 
 export default async function RootRoute({ params }: { params: { lang: string } }) {
 
@@ -101,7 +101,8 @@ export default async function RootRoute({ params }: { params: { lang: string } }
       }
     }
 
-    const page = await getPageBySlug('home1', params.lang, populateHomeRe)
+    const page = await getPageBySlug('home', params.lang, populateHomeRe)
+    console.log("🚀 ~ RootRoute ~ page:", page)
 
     if (page.error && page.error.status == 401) {
       throw new Error(
@@ -112,7 +113,7 @@ export default async function RootRoute({ params }: { params: { lang: string } }
 
     if (page.data.length == 0 && params.lang !== 'vi') return <LangRedirect />
     if (page.data.length === 0) return <SamepleData /> //null
-    const contentSections = page.data[0].contentSections
+    const contentSections = page.data[0].attributes.contentSections
     return contentSections.map((section: any, index: number) =>
       componentResolverRoute(section, index, "home")
     )
