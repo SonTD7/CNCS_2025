@@ -5,13 +5,12 @@ import OverscrollPlugin from "smooth-scrollbar/plugins/overscroll";
 
 
 import { UseMediaQuery } from "@/hooks/use-media-query";
-import { Navigate } from "@/app/[lang]/(header)/navigate";
-import MobileNavigate from "@/app/[lang]/(header)/mobile-navigate";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-
 import { Fahkwang } from 'next/font/google'
 
+import { Navigate } from "@/app/[lang]/_layout/smooth/header/navigate"
+import MobileNavigate from "@/app/[lang]/_layout/smooth/header/mobile-navigate"
 import gsap from "gsap"
 
 import { useGSAP } from "@gsap/react"

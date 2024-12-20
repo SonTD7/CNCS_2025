@@ -1,0 +1,15 @@
+{
+    "home": {
+        "title1": "la gi"
+    },
+    "global": {
+        "loader": {
+            "description": "Lotusa Workspaces"
+        }
+    },
+    "errors": {
+        "h1": "what's wrong",
+        "h2": "Read error information below",
+        "button_title": "Back"
+    }
+}

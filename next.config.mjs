@@ -1,4 +1,7 @@
+
+
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
 	images: {
 		remotePatterns: [
@@ -68,8 +71,7 @@ const nextConfig = {
 
 		return config
 	},
-	trailingSlash: true
-
+	trailingSlash: true,
 	// reactStrictMode: false,
 }
 

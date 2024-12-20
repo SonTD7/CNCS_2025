@@ -1,0 +1,21 @@
+{
+    "home": {
+        "left_right": {
+            "title": "Xây dựng sản phẩm ky thuật số và thương hiệu",
+            "desc": "Mẫu trang đích mã nguồn mở và miễn phí này được xây dựng bằng cách sử dụng các lớp tiện ích từ Tailwind CSS và dựa trên các thành phần từ Thư viện Flowbite và Hệ thống Blocks.",
+            "button_git": "Xem trên GitHub",
+            "button_figma": "Lấy file Figma"
+
+        }
+    },
+    "global": {
+        "loader": {
+            "description": "Bộ Phận Kỹ Thuật DEV"
+        }
+    },
+    "errors": {
+        "h1": "Có gì đó sai sai",
+        "h2": "Đọc thôn tin lỗi phía dưới",
+        "button_title": "Quay lại"
+    }
+}

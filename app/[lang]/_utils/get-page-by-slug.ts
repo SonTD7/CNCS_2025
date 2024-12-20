@@ -13,6 +13,7 @@ export async function getPageBySlug(slug: string, lang: string, populate:any = "
         populate: populate
     };
 
-    const options = { headers: { Authorization: `Bearer ${token}` } };
+    const options = {  };
+    // const options = { headers: { Authorization: `Bearer ${token}` } };
     return await fetchAPI(path, urlParamsObject, options);
 }

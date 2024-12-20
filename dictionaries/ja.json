@@ -1,6 +1,15 @@
 {
     "home": {
-        "title1": "la gi"
+        "homeBanner": {
+			"title": "デジタル製品とブランドの構築",
+			"desc": "この無料のオープンソース ランディング ページ テンプレートは、Tailwind CSS のユーティリティ クラスを使用し、Flowbite Library および Blocks System のコンポーネントに基づいて構築されています。",
+			"button_git": "GitHub で見る",
+			"button_figma": "Figma ファイルを取得します"
+		},
+        "youtubeEmbed": {
+            "title": "Youtubeを埋め込む"
+        }
+
     },
     "global": {
         "loader": {

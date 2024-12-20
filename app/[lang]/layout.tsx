@@ -3,6 +3,7 @@ import { i18n } from "@/i18n-config"
 import { getDictionary } from "./get-dictionary"
 import Smooth from "./_layout/smooth/smooth"
 import Default from "./_layout/default/default"
+import { LanguageProvider } from "@/contexts/LangContext"
 const data: string = "1smooth"
 const LAYOUT_CONFIG = data ?? "smooth"
 console.log("🚀 ~ LAYOUT_CONFIG:", LAYOUT_CONFIG)
@@ -41,22 +42,25 @@ export default async function RootLayout({
 }>) {
 	const dicts = await getDictionary(params.lang)
 
+	// Providing all messages to the client
+	// side is the easiest way to get started
 	return (
-		
-		<html lang={params.lang} suppressHydrationWarning >
-            <body
-                className={`antialiased dark:bg-slate-600 bg-popover text-popover-foreground`}
-				>
-			{LAYOUT_CONFIG == "smooth" ? (
-				<Smooth params={params.lang} dicts={dicts}>
-					{children}
-				</Smooth>
-			) : (
-				<Default params={params.lang} dicts={dicts}>
-					{children}
-				</Default>
-			)}
-            </body>
+		<html lang={params.lang} suppressHydrationWarning>
+			<body
+				className={`antialiased dark:bg-slate-600 bg-popover text-popover-foreground`}
+			>
+				<LanguageProvider dicts={dicts} lang={params.lang}>
+					{LAYOUT_CONFIG == "smooth" ? (
+						<Smooth params={params.lang} dicts={dicts}>
+							{children}
+						</Smooth>
+					) : (
+						<Default params={params.lang} dicts={dicts}>
+							{children}
+						</Default>
+					)}
+				</LanguageProvider>
+			</body>
 		</html>
 	)
 }

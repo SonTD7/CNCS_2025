@@ -1,15 +1,24 @@
 {
-    "home": {
-        "title1": "la gi"
-    },
-    "global": {
-        "loader": {
-            "description": "Lotusa Workspaces"
+	"home": {
+		"homeBanner": {
+			"title": "Membangun produk dan merek digital",
+			"desc": "Templat halaman arahan sumber terbuka dan gratis ini dibuat menggunakan kelas utilitas dari Tailwind CSS dan berdasarkan komponen dari Flowbite Library dan Blocks System.",
+			"button_git": "Lihat di GitHub",
+			"button_figma": "Dapatkan file Figma"
+		},
+        "youtubeEmbed": {
+            "title": "Sematkan Youtube"
         }
-    },
-    "errors": {
-        "h1": "what's wrong",
-        "h2": "Read error information below",
-        "button_title": "Back"
-    }
+
+	},
+	"global": {
+		"loader": {
+			"description": "Departemen Teknis DEV"
+		}
+	},
+	"errors": {
+		"h1": "Ada yang salah",
+		"h2": "Baca informasi kesalahan di bawah ini",
+		"button_title": "Kembali"
+	}
 }

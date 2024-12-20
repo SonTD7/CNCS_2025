@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 import { getMenu } from "@/app/[lang]/_utils/get-menu"
-import menuResolverRouter from "../_utils/menu-resolver-router"
+import menuResolverRouter from "../../../_utils/menu-resolver-router"
 interface Layout {
     title: string
     url: string

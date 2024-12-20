@@ -7,6 +7,7 @@ import AutoScrollTop from "../../_utils/auto-scroll-top"
 import { Fahkwang } from "next/font/google"
 import HomeBanner from "../../_components/home/HomeBanner"
 import HomeHero from "../../_components/home/HomeHero"
+import VideoEmbed from "../../_components/VideoEmbed"
 
 const fahkwang = Fahkwang({
 	subsets: ["vietnamese"],
@@ -15,6 +16,13 @@ const fahkwang = Fahkwang({
 	fallback: ["system-ui", "arial"],
 	variable: "--font-fahkwang",
 })
+const dataSample = {
+	id: 1,
+	url: "https://www.youtube.com/watch?v=Qr7Ng6fpqnk",
+	width: "100%",
+	height: "100%"
+  }
+  
 
 export default function Default({
 	children,
@@ -35,8 +43,9 @@ export default function Default({
 			>
 			<Loader locale={params.lang} dicts={dicts} />
 			<Header locale={params.lang} dicts={dicts} />
-			<HomeBanner />
-			<HomeHero />
+			{/* <HomeBanner />
+			<VideoEmbed data={dataSample}/>
+			<HomeHero /> */}
 			
 			{children}
 			<Footer locale={params.lang} dicts={dicts} />
