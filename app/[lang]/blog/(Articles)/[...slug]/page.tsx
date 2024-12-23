@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { FALLBACK_SEO } from "@/app/[lang]/_utils/constants";
-import LangRedirect from "../../_components/LangRedirect"
-import componentResolverRouteLayout from '../../_utils/component-resolver-route-layout';
+import LangRedirect from "../../../_components/LangRedirect"
+import componentResolverRouteLayout from '../../../_utils/component-resolver-route-layout';
 import { getArticleBySlug } from "@/app/[lang]/_utils/get-article-by-slug";
 import { notFound } from "next/navigation"
 

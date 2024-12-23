@@ -1,7 +1,4 @@
-"use client"
-import ChapterHeader from "../../blog/(Articles)/[...slug]/layout/landing/chapter-header";
-import ChapterContents from "../../blog/(Articles)/[...slug]/layout/landing/chapter-contents";
-
+import ChapterArticle from "./chapter-article"
 interface Cover {
     id: number
     url: string
@@ -37,12 +34,15 @@ interface props {
     chapterContents: ChapterContent[]
 }
 
-export default function LandingSectionChapter({ data }: { data: any }) {
-
+export default function ChapterContents({ data }: { data: props }) {
+    const { chapterContents } = data
     return (
         <>
-            <ChapterHeader data={data} />
-            <ChapterContents data={data} />
+            {
+                chapterContents.map(({ id, layoutSection, article }, index) => (
+                    <ChapterArticle  data={article} key={index} />
+                ))
+            }
         </>
     );
 }
