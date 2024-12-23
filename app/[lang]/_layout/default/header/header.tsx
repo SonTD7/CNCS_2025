@@ -14,7 +14,7 @@ const fahkwang = Fahkwang({
 	weight: ["200", "300", "400", "500", "600", "700"],
 })
 
-function Header({locale, dicts}: {locale: any, dicts: any}) {
+function Header() {
 	const isDesktop = UseMediaQuery("(min-width: 1024px)")
 	const [isHidden, setIsHidden] = useState(false)
 	const [bg, setBg] = useState("bg-transparent")
@@ -28,14 +28,11 @@ function Header({locale, dicts}: {locale: any, dicts: any}) {
 			lastYRef.current = y
 		}
 		if (Math.abs(y) > 50) {
-			console.log("🚀 ~ useMotionValueEvent ~ y:", y)
 			setBg("!bg-white dark:!bg-black")
 		} else {
             setBg("bg-transparent")
         }
-			console.log("🚀 ~ useMotionValueEvent ~ Bg:", bg)
 	})
-
 
 	return (
 		<motion.div

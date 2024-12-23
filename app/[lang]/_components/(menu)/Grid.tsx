@@ -7,21 +7,8 @@ import {
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 
-interface Items {
-    title: string
-    url: string
-    summary: string
-}
+import { Props} from "./helpers"
 
-interface Layout {
-    title: string
-    children: Items[]
-    url: string
-    summary: string
-}
-interface Props {
-    data: Layout
-}
 
 export default function Grid({ data }: Props) {
     const { children, title } = data

@@ -15,7 +15,7 @@ const fahkwang = Fahkwang({
     weight: ['200', '300', '400', '500', '600', '700']
 })
 
-function Header({locale, dicts}: {locale: any, dicts: any}) {
+function Header() {
     const isDesktop = UseMediaQuery("(min-width: 1024px)");
 
     useEffect(() => {

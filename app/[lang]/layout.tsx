@@ -42,8 +42,6 @@ export default async function RootLayout({
 }>) {
 	const dicts = await getDictionary(params.lang)
 
-	// Providing all messages to the client
-	// side is the easiest way to get started
 	return (
 		<html lang={params.lang} suppressHydrationWarning>
 			<body

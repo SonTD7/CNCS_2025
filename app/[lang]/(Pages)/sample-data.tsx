@@ -6,8 +6,8 @@ import RiveApp from "./sample/rive-app"
 export default function SampleData() {
 	return (
 		<>
-			<div className="h-screen relative w-auto">
-				{/* <SimpleSlider /> */}
+			<div className="block relative w-auto">
+				<SimpleSlider />
 				<RiveApp />
 			</div>
 		</>

@@ -6,22 +6,7 @@ import {
     NavigationMenuLink,
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
-interface Items {
-    title: string
-    url: string
-    summary: string
-}
-
-interface Layout {
-    title: string
-    children: Items[]
-    url: string
-    summary: string
-}
-
-interface Props {
-    data: Layout
-}
+import { Props } from "./helpers"
 
 export default function Hot({ data }: Props) {
     const { children, title } = data

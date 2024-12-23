@@ -7,7 +7,7 @@ export default function HomeBanner() {
 
 	return (
 		<>
-			<section className="bg-white dark:bg-gray-900">
+			<section className="bg-white dark:bg-gray-900 h-full min-h-screen xl:pt-20">
 				<div className="container">
 					<div className=" grid 1max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28">
 						<div className="mr-auto place-self-center lg:col-span-7">

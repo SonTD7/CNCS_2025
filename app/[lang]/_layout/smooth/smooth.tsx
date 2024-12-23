@@ -56,9 +56,9 @@ export default function Smooth({
 				id="main"
 			>
 				<Loader locale={params.lang} dicts={dicts} />
-				<Header locale={params.lang} dicts={dicts} />
+				<Header />
 				{children}
-				<Footer locale={params.lang} dicts={dicts} />
+				<Footer />
 				<AutoScrollTop />
 			</main>
 		</>

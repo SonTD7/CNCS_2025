@@ -17,7 +17,7 @@ export default function RiveApp() {
 	  });
   
   return (
-	<RiveComponent className="w-screen h-screen"
+	<RiveComponent className="w-screen h-[700px]"
 	onMouseEnter={() => rive && rive.play()}
 	onMouseLeave={() => rive && rive.pause()}
   />

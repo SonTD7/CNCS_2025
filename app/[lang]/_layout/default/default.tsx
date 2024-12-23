@@ -4,25 +4,7 @@ import Loader from "./header/loader"
 import Header from "./header/header"
 import { cn } from "@/lib/utils"
 import AutoScrollTop from "../../_utils/auto-scroll-top"
-import { Fahkwang } from "next/font/google"
-import HomeBanner from "../../_components/home/HomeBanner"
-import HomeHero from "../../_components/home/HomeHero"
-import VideoEmbed from "../../_components/VideoEmbed"
-
-const fahkwang = Fahkwang({
-	subsets: ["vietnamese"],
-	weight: ["200", "300", "400", "500", "600", "700"],
-	display: "swap",
-	fallback: ["system-ui", "arial"],
-	variable: "--font-fahkwang",
-})
-const dataSample = {
-	id: 1,
-	url: "https://www.youtube.com/watch?v=Qr7Ng6fpqnk",
-	width: "100%",
-	height: "100%"
-  }
-  
+import { fahkwang } from "./helpers"
 
 export default function Default({
 	children,
@@ -40,15 +22,11 @@ export default function Default({
 				"pt-20 main-ele dark:bg-slate-600 bg-popover text-popover-foreground"
 			)}
 			id="main"
-			>
+		>
 			<Loader locale={params.lang} dicts={dicts} />
-			<Header locale={params.lang} dicts={dicts} />
-			{/* <HomeBanner />
-			<VideoEmbed data={dataSample}/>
-			<HomeHero /> */}
-			
+			<Header />
 			{children}
-			<Footer locale={params.lang} dicts={dicts} />
+			<Footer />
 			<AutoScrollTop />
 		</main>
 	)
