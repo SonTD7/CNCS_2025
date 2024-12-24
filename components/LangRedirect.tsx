@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { renderButtonStyle } from "../_utils/render-button-style";
+import { renderButtonStyle } from "@/lib/render-button-style";
 
 export default function LangRedirect() {
   return (

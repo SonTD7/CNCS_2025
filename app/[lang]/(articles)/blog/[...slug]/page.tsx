@@ -15,7 +15,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const page = await getByTypeSlug("/articles", params.slug, params.lang, populateArticles);
-    if (page && !page.data[0]?.seo) return FALLBACK_SEO;
+    if (page ?? !page.data[0]?.seo) return FALLBACK_SEO;
     const metadata = page.data[0].seo
 
     return {
