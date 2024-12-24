@@ -12,7 +12,7 @@ const CONFIG_DEMO = true
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = await getByTypeSlug('/pages',params.slug, params.lang);
 
-  if (!page.data[0]?.seo1) return FALLBACK_SEO;
+  if (page ?? !page.data[0]?.seo1) return FALLBACK_SEO;
   const metadata = page.data[0].seo
 
   return {

@@ -1,5 +1,5 @@
-import Hotlanding from "./layout/landing/hot-landing"
-import Blogarticle from "./layout/article/blog-article"
+import Hotlanding from "./_layout/landing/hot-landing"
+import Blogarticle from "./_layout/article/blog-article"
 import { fetchAPI } from "@/app/[lang]/_utils/fetch-api";
 import Categories from "./categories";
 import { notFound } from "next/navigation"

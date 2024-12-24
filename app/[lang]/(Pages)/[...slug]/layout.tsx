@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation"
 import { getByTypeSlug } from "../../_utils/get-by-type-slug"
 import { populatePages, LAYOUT_CONFIG } from "./helpers"
-import Default from "./layout/default/default"
-import Awing from "./layout/awing/awing"
+import Default from "./_layout/default/default"
+import Awing from "./_layout/awing/awing"
 
 export default async function SlugLayout({
 	children,
@@ -16,7 +16,7 @@ export default async function SlugLayout({
 }) {
 	const { slug, lang } = params
 	const resData = await getByTypeSlug("/pages", slug, lang, populatePages)
-	console.log("🚀 ~ resData:", resData.data[0].attributes.cover.data)
+	resData ?? console.log("🚀 ~ resData:", resData.data[0].attributes.cover.data)
 	try {
 		return (
 			<>

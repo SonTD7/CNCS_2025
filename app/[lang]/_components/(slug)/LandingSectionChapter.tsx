@@ -1,6 +1,6 @@
 "use client"
-import ChapterHeader from "../../blog/(Articles)/[...slug]/layout/landing/chapter-header";
-import ChapterContents from "../../blog/(Articles)/[...slug]/layout/landing/chapter-contents";
+import ChapterHeader from "../../blog/(Articles)/[...slug]/_layout/landing/chapter-header";
+import ChapterContents from "../../blog/(Articles)/[...slug]/_layout/landing/chapter-contents";
 
 interface Cover {
     id: number
