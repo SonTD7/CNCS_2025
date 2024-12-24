@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import { getByTypeSlug } from "../../_utils/get-by-type-slug"
+import { getByTypeSlug } from "../../../../lib/get-by-type-slug"
 import { populatePages, LAYOUT_CONFIG } from "./helpers"
 import Default from "./_layout/default/default"
 import Awing from "./_layout/awing/awing"

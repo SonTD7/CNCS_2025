@@ -1,7 +1,7 @@
 "use client"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useContext, useEffect, useState } from "react";
-import { TOCContext } from "../../../../lib/TOCContextType";
+import { TOCContext } from "../../../../../lib/TOCContextType";
 import { cn } from "@/lib/utils";
 import { UseMediaQuery } from "@/hooks/use-media-query";
 

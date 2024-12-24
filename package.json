@@ -23,6 +23,7 @@
     "@rive-app/react-canvas": "^4.17.4",
     "@smakss/react-scroll-direction": "^4.2.0",
     "@strapi/blocks-react-renderer": "^1.0.1",
+    "@types/gsap": "^3.0.0",
     "@types/js-cookie": "^3.0.6",
     "@types/negotiator": "^0.6.3",
     "@types/qs": "^6.9.16",

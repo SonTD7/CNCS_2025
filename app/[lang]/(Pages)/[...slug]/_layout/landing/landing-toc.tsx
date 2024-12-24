@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { getStrapiMedia } from "../../../../_utils/api-helpers"
+import { getStrapiMedia } from "../../../../../../lib/api-helpers"
 import LocomotiveScroll from 'locomotive-scroll';
 import { useCallback } from "react";
 interface ChapterContent {

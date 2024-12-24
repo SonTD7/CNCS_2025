@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Image from "next/image"
-import { getStrapiMedia } from "../../../../_utils/api-helpers"
+import { getStrapiMedia } from "../../../../../../lib/api-helpers"
 
 interface Cover {
     id: number

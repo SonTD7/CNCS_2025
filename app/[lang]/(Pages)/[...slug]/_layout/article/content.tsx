@@ -4,7 +4,7 @@ import { League_Spartan } from "next/font/google";
 import FbIcon from "../../(images)/fb-icon";
 import TwitterIcon from "../../(images)/twitter-icon";
 import TableOfContents from "../../table-of-contents";
-import { TOCContext, useTOCContextValues } from "../../../../_utils/TOCContextType";
+import { TOCContext, useTOCContextValues } from "../../../../../../lib/TOCContextType";
 import { useState } from "react";
 
 const inter = League_Spartan({

@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Image from "next/image"
-import { getStrapiMedia } from "../../../../_utils/api-helpers"
+import { getStrapiMedia } from "../../../../../../lib/api-helpers"
 import { League_Spartan } from "next/font/google";
 import { cn } from "@/lib/utils"
 import DOMPurify from "isomorphic-dompurify";

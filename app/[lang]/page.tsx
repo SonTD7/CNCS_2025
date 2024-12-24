@@ -1,24 +1,24 @@
 import { Metadata } from "next"
-import { FALLBACK_SEO } from "@/app/[lang]/_utils/constants"
-import LangRedirect from "./_components/LangRedirect"
-import { getByTypeSlug } from "./_utils/get-by-type-slug"
-import componentResolverRoute from "./_utils/component-resolver-route"
-import HomeBanner from "./_components/home/HomeBanner"
-import VideoEmbed from "./_components/VideoEmbed"
-import HomeHero from "./_components/home/HomeHero"
+import { FALLBACK_SEO } from "@/lib/constants"
+import LangRedirect from "@/components/LangRedirect"
+import { getByTypeSlug } from "../../lib/get-by-type-slug"
+import componentResolverRoute from "../../lib/component-resolver-route"
+import HomeBanner from "../../components/layouts/default/home/HomeBanner"
+import VideoEmbed from "../../components/layouts/default/home/VideoEmbed"
+import HomeHero from "../../components/layouts/default/home/HomeHero"
 import { populateHomeRe, dataSample, Props } from "./helpers"
 const CONFIG_DEMO = true
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const page = await getByTypeSlug('/pages',params.slug, params.lang);
+	const page = await getByTypeSlug('/pages', params.slug, params.lang);
 
-  if (page ?? !page.data[0]?.seo1) return FALLBACK_SEO;
-  const metadata = page.data[0].seo
+	if (page ?? !page.data[0]?.seo1) return FALLBACK_SEO;
+	const metadata = page.data[0].seo
 
-  return {
-    title: metadata.metaTitle,
-    description: metadata.metaDescription
-  }
+	return {
+		title: metadata.metaTitle,
+		description: metadata.metaDescription
+	}
 }
 
 export default async function RootRoute({
@@ -34,10 +34,10 @@ export default async function RootRoute({
 				<HomeHero />
 			</>
 		)
-		
-		const page = await getByTypeSlug("/pages",'home', params.lang, populateHomeRe)
+
+		const page = await getByTypeSlug("/pages", 'home', params.lang, populateHomeRe)
 		console.log("🚀 ~ page:", page.data[0].attributes.cover)
-		
+
 		return null
 		// const page = await getPageBySlug("home", params.lang, populateHomeRe)
 
@@ -53,8 +53,8 @@ export default async function RootRoute({
 		// if (page.data.length === 0) return <SamepleData /> //null
 		const contentSections = page.data[0].attributes.contentSections
 		return contentSections.map((section: any, index: number) =>
-				componentResolverRoute(section, index, "home")
-			)
+			componentResolverRoute(section, index, "home")
+		)
 	} catch (error: any) {
 		if (typeof window !== "undefined") {
 			window.alert("Missing or invalid credentials")

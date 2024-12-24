@@ -1,8 +1,8 @@
 import { Metadata } from "next"
-import { FALLBACK_SEO } from "@/app/[lang]/_utils/constants"
-import LangRedirect from "../../_components/LangRedirect"
-import componentResolverRoute from "../../_utils/component-resolver-route"
-import { getByTypeSlug } from "../../_utils/get-by-type-slug"
+import { FALLBACK_SEO } from "@/lib/constants"
+import LangRedirect from "../../../../components/LangRedirect"
+import componentResolverRoute from "../../../../lib/component-resolver-route"
+import { getByTypeSlug } from "../../../../lib/get-by-type-slug"
 import { notFound } from "next/navigation"
 import { populatePages } from "./helpers"
 type Props = {

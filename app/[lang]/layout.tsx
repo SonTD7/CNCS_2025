@@ -1,13 +1,10 @@
-import { fetchAPI } from "@/app/[lang]/_utils/fetch-api"
+import { fetchAPI } from "@/lib/fetch-api"
 import { i18n } from "@/i18n-config"
-import { getDictionary } from "./get-dictionary"
-import Smooth from "./_layout/smooth/smooth"
-import Default from "./_layout/default/default"
+import { getDictionary } from "@/dictionaries/get-dictionary"
+import Smooth from "@/components/layouts/smooth/smooth"
+import Default from "@/components/layouts/default/default"
 import { LanguageProvider } from "@/contexts/LangContext"
-const data: string = "1smooth"
-const LAYOUT_CONFIG = data ?? "smooth"
-console.log("🚀 ~ LAYOUT_CONFIG:", LAYOUT_CONFIG)
-
+import { LAYOUT_CONFIG } from "@/lib/constants"
 async function getGlobal(lang: string): Promise<any> {
 	const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN
 
