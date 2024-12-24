@@ -3,7 +3,14 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## requirement
 Node version: 20.x
 
-## Getting Started
+## Tech stack
+- Tailwind css
+- Shadcn UI
+- Frame Motion
+- Locomotive Scroll
+- GSAP
+
+
 
 First, run the development server:
 

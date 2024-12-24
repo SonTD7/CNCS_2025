@@ -8,9 +8,11 @@ export default function Awing({
 		slug: string
 	}
 }) {
+    const {slug} = params
+    console.log("🚀 ~ slug:", slug)
     return (
         <div>
-            {children} Layout Awing
+            {children}
         </div>
     );
 }

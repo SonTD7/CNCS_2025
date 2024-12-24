@@ -59,6 +59,10 @@ const nextConfig = {
 			 {
 				protocol: "https",
 				hostname: "**.themesberg.com"
+			 },
+			 {
+				protocol: "https",
+				hostname: "**.tailgrids.com"
 			 }
 		],
 	},

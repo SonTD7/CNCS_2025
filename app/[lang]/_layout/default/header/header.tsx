@@ -30,7 +30,7 @@ function Header() {
 		if (Math.abs(y) > 50) {
 			setBg("!bg-white dark:!bg-black")
 		} else {
-            setBg("bg-transparent")
+            setBg("bg-white dark:bg-black")
         }
 	})
 
@@ -41,13 +41,14 @@ function Header() {
 			onFocusCapture={() => setIsHidden(false)}
 			variants={{
 				hidden: {
-					// y: "-90px",
-					y: "0",
-					backgroundColor: "white",
+					y: "-100px",
+					// y: "0",
+					// backgroundColor: "white",
 				},
 				visible: {
 					y: "0%",
-					backgroundColor: "transparent",
+					// backgroundColor: "white",
+					// backgroundColor: "transparent",
 				},
 			}}
 			transition={{ duration: 0.1 }}
