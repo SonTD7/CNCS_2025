@@ -1,0 +1,1 @@
+export const LAYOUT_CONFIG:string = "default"

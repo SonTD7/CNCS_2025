@@ -38,6 +38,7 @@ export function middleware(request: NextRequest) {
         [
             "/manifest.json",
             "/favicon.ico",
+            "/hero.png"
             // Your other files in `public`
         ].includes(pathname)
     )
@@ -79,7 +80,10 @@ export function middleware(request: NextRequest) {
 
 export const config = {
     // Matcher ignoring `/_next/` and `/api/`
-    matcher: ["/((?!_next).*)"],
-    // matcher: ['/', '/(vi|en|ja|id)/:path*', "/((?!_next).*)"]
+    // matcher: ["/((?!_next).*)"],
+    matcher: [
+        // Apply middleware to all paths except `/images`, `/_next/`
+        "/((?!images|_next).*)",
+      ],
 
 };

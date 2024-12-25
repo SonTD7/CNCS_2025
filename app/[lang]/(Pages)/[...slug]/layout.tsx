@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation"
-import { getByTypeSlug } from "../../../../lib/get-by-type-slug"
-import { populatePages, LAYOUT_CONFIG } from "./helpers"
-import Default from "./_layout/default/default"
-import Awing from "./_layout/awing/awing"
+import { getByTypeSlug } from "@/lib/api/get-by-type-slug"
+import { populatePages } from "./helpers"
+import { LAYOUT_CONFIG } from "@/lib/constants/config"
+import { lazy } from "react"
+const Layout = lazy(() => import(`@/components/themes/${LAYOUT_CONFIG}/pages/route`))
 
 export default async function SlugLayout({
 	children,
@@ -17,15 +18,9 @@ export default async function SlugLayout({
 	const { slug, lang } = params
 	const resData = await getByTypeSlug("/pages", slug, lang, populatePages)
 	resData ?? console.log("🚀 ~ resData:", resData.data[0].attributes.cover.data)
+
 	try {
-		return (
-			<>
-				{LAYOUT_CONFIG == "default" ? 
-					<Default params={params} children={children}/>
-				 :  <Awing params={params} children={children}/> 
-                }
-			</>
-		)
+		return <Layout params={params}>{children}</Layout>
 	} catch (e: any) {
 		// throw new Error(e)
 		notFound()

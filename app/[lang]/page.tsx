@@ -1,11 +1,11 @@
 import { Metadata } from "next"
-import { FALLBACK_SEO } from "@/lib/constants"
-import LangRedirect from "@/components/LangRedirect"
-import { getByTypeSlug } from "../../lib/get-by-type-slug"
-import componentResolverRoute from "../../lib/component-resolver-route"
-import HomeBanner from "../../components/layouts/default/home/HomeBanner"
-import VideoEmbed from "../../components/layouts/default/home/VideoEmbed"
-import HomeHero from "../../components/layouts/default/home/HomeHero"
+import { FALLBACK_SEO } from "@/lib/constants/fallback"
+import LangRedirect from "@/components/globals/LangRedirect"
+import { getByTypeSlug } from "@/lib/api/get-by-type-slug"
+import componentResolverRoute from "@/lib/utils/component-resolver-route"
+import HomeBanner from "@/components/themes/default/home/HomeBanner"
+import VideoEmbed from "@/components/themes/default/home/VideoEmbed"
+import HomeHero from "@/components/themes/default/home/HomeHero"
 import { populateHomeRe, dataSample, Props } from "./helpers"
 const CONFIG_DEMO = true
 
@@ -36,17 +36,16 @@ export default async function RootRoute({
 		)
 
 		const page = await getByTypeSlug("/pages", 'home', params.lang, populateHomeRe)
-		console.log("🚀 ~ page:", page.data[0].attributes.cover)
-
-		return null
+		// console.log("🚀 ~ page:", page.data[0].attributes.cover)
+		// return null
 		// const page = await getPageBySlug("home", params.lang, populateHomeRe)
 
-		// if (page.error && page.error.status == 401) {
-		// 	throw new Error(
-		// 		"Missing or invalid credentials. Have you created an access token using the Strapi admin panel? http://localhost:1337/admin/"
-		// 	)
-		// 	return null
-		// }
+		if (page.error && page.error.status == 401) {
+			throw new Error(
+				"Missing or invalid credentials. Have you created an access token using the Strapi admin panel? http://localhost:1337/admin/"
+			)
+			return null
+		}
 
 		// if (page.data.length == 0 && params.lang !== "vi")
 		// 	return <LangRedirect />

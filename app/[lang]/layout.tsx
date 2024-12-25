@@ -1,34 +1,16 @@
-import { fetchAPI } from "@/lib/fetch-api"
 import { i18n } from "@/i18n-config"
 import { getDictionary } from "@/dictionaries/get-dictionary"
-import Smooth from "@/components/layouts/smooth/smooth"
-import Default from "@/components/layouts/default/default"
 import { LanguageProvider } from "@/contexts/LangContext"
-import { LAYOUT_CONFIG } from "@/lib/constants"
-async function getGlobal(lang: string): Promise<any> {
-	const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN
+import { LAYOUT_CONFIG } from "@/lib/constants/config"
+// import { lazy } from "react"
+import dynamic from "next/dynamic"
 
-	if (!token)
-		throw new Error("The Strapi API Token environment variable is not set.")
-	const path = `/global`
-	const options = { headers: { Authorization: `Bearer ${token}` } }
-	const urlParamsObject = {
-		populate: [
-			// "metadata.shareImage",
-			// "favicon",
-			// "notificationBanner.link",
-			// "navbar.links",
-			// "navbar.navbarLogo.logoImg",
-			// "footer.footerLogo.logoImg",
-			// "footer.menuLinks",
-			// "footer.legalLinks",
-			// "footer.socialLinks",
-			// "footer.categories",
-		],
-		locale: lang,
-	}
-	return await fetchAPI(path, urlParamsObject, options)
-}
+// const Layout = lazy(() => import(`@/components/themes/${LAYOUT_CONFIG}/route`))
+const Layout = dynamic<{
+	children: React.ReactNode;
+	params?: string;
+	dicts?: string;
+}>(() => import(`@/components/themes/${LAYOUT_CONFIG}/route`))
 
 export default async function RootLayout({
 	children,
@@ -45,15 +27,7 @@ export default async function RootLayout({
 				className={`antialiased dark:bg-slate-600 bg-popover text-popover-foreground`}
 			>
 				<LanguageProvider dicts={dicts} lang={params.lang}>
-					{LAYOUT_CONFIG == "smooth" ? (
-						<Smooth params={params.lang} dicts={dicts}>
-							{children}
-						</Smooth>
-					) : (
-						<Default params={params.lang} dicts={dicts}>
-							{children}
-						</Default>
-					)}
+					<Layout params={params.lang} dicts={dicts}> {children} </Layout>
 				</LanguageProvider>
 			</body>
 		</html>

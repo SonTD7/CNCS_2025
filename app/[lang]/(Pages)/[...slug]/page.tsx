@@ -1,8 +1,8 @@
 import { Metadata } from "next"
-import { FALLBACK_SEO } from "@/lib/constants"
-import LangRedirect from "../../../../components/LangRedirect"
-import componentResolverRoute from "../../../../lib/component-resolver-route"
-import { getByTypeSlug } from "../../../../lib/get-by-type-slug"
+import { FALLBACK_SEO } from "@/lib/constants/fallback"
+import LangRedirect from "@/components/globals/LangRedirect"
+import componentResolverRoute from "@/lib/utils/component-resolver-route"
+import { getByTypeSlug } from "@/lib/api/get-by-type-slug"
 import { notFound } from "next/navigation"
 import { populatePages } from "./helpers"
 type Props = {
@@ -25,7 +25,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function RootRoute({ params }: Props) {
 	try {
-		return <p>child nay</p>
 		const page = await getByTypeSlug(
 			"/pages",
 			params.slug,

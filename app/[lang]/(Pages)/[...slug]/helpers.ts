@@ -1,5 +1,3 @@
-export const LAYOUT_CONFIG = "default"
-
 export const populatePages = {
 
 	cover: {
