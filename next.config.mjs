@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+    // experimental: {
+    //     turbo: {
+    //         // Enable Turbopack
+    //         loaders: {
+    //             '.ts': ['next-turbo-loader'],
+    //             '.tsx': ['next-turbo-loader'],
+    //           }
+    //     }
+    // },
     images: {
         remotePatterns: [
             {
@@ -12,7 +21,7 @@ const nextConfig = {
             {
                 protocol: "http",
                 hostname: "localhost",
-                port: "3000"
+                port: "3000",
             },
             {
                 protocol: "https",
@@ -78,6 +87,7 @@ const nextConfig = {
 
         return config;
     },
+   
     trailingSlash: true,
     // reactStrictMode: false,
 };

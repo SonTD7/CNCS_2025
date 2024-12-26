@@ -1,13 +1,9 @@
 import { Metadata } from "next"
 import { FALLBACK_SEO } from "@/lib/constants/fallback"
-import LangRedirect from "@/components/globals/LangRedirect"
 import { getByTypeSlug } from "@/lib/api/get-by-type-slug"
 import componentResolverRoute from "@/lib/utils/component-resolver-route"
-import HomeBanner from "@/components/themes/default/home/HomeBanner"
-import VideoEmbed from "@/components/themes/default/home/VideoEmbed"
-import HomeHero from "@/components/themes/default/home/HomeHero"
-import { populateHomeRe, dataSample, Props } from "./helpers"
-const CONFIG_DEMO = true
+import { populateHomeRe, dataSample, Props, layoutData } from "./helpers"
+import { slugToComponentName } from "@/lib/utils/utils"
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const page = await getByTypeSlug('/pages', params.slug, params.lang);
@@ -27,18 +23,8 @@ export default async function RootRoute({
 	params: { lang: string }
 }) {
 	try {
-		return (
-			<>
-				<HomeBanner />
-				<VideoEmbed data={dataSample} />
-				<HomeHero />
-			</>
-		)
 
 		const page = await getByTypeSlug("/pages", 'home', params.lang, populateHomeRe)
-		// console.log("🚀 ~ page:", page.data[0].attributes.cover)
-		// return null
-		// const page = await getPageBySlug("home", params.lang, populateHomeRe)
 
 		if (page.error && page.error.status == 401) {
 			throw new Error(
@@ -47,16 +33,22 @@ export default async function RootRoute({
 			return null
 		}
 
-		// if (page.data.length == 0 && params.lang !== "vi")
-		// 	return <LangRedirect />
-		// if (page.data.length === 0) return <SamepleData /> //null
-		const contentSections = page.data[0].attributes.contentSections
-		return contentSections.map((section: any, index: number) =>
-			componentResolverRoute(section, index, "home")
-		)
+		const contentSections = page?.data[0]?.attributes?.contentSections
+		return contentSections ?
+			contentSections.map((section: any, index: number) =>
+				componentResolverRoute(section, index, "home")
+			) :
+			(
+				<>
+					{
+						layoutData && layoutData.map((item, index) => {
+							const Layout = slugToComponentName(item, "fallback/home", dataSample)
+							return <Layout data={dataSample} key={index} />
+						})
+					}
+				</>
+			)
 	} catch (error: any) {
-		if (typeof window !== "undefined") {
-			window.alert("Missing or invalid credentials")
-		}
+		typeof window !== "undefined" && window?.alert("Missing or invalid credentials")
 	}
 }

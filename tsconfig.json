@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -12,16 +16,32 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "typeRoots": ["./node_modules/@types", "./types"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "gsap.d.ts","**/*.ts", "**/*.tsx", ".next/types/**/*app/[lang]/(apages)/(images)/wave-svg.jsxs", "postcss.config.mjs", "app/[lang]/(Pages)/(images)/wave-svg.jsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "gsap.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*app/[lang]/(apages)/(images)/wave-svg.jsxs",
+    "postcss.config.mjs",
+    "app/[lang]/(Pages)/(images)/wave-svg.jsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

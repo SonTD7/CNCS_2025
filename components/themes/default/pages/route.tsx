@@ -1,6 +1,4 @@
-import Faqs from "./Faqs"
-import Contact from "./Contact"
-import ContactSecond from "./contact-second"
+import {slugToComponentName} from "@/lib/utils/utils"
 export default function Route({
 	children,
 	params,
@@ -12,20 +10,6 @@ export default function Route({
 	}
 }) {
 	const { slug } = params
-	console.log("🚀 ~ slug:", slug)
-	return (
-		<>
-			{
-				slug[0] == 'faqs' && <Faqs />
-			}
-			{
-				slug[0] == 'contact' && <Contact /> 
-			}
-			{
-				slug[0] == 'contact2' && <ContactSecond />
-			}
-			
-
-		</>
-	);
+	const FLayout = slugToComponentName(slug[0], "fallback/pages")
+	return <FLayout />
 }

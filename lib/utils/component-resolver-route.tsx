@@ -1,7 +1,7 @@
 import { ReactElement, lazy, createElement, Suspense } from 'react';
 import Loader from '@/components/themes/default/header/loader';
 import { LAYOUT_CONFIG } from '../constants/config';
-
+import { capitalizeFirstLetter } from './utils';
 export default function componentResolverRoute(section: any, index: number, route?: string): ReactElement {
 
     // Component names do look like 'category.component-name' => lowercase and kebap case
@@ -46,8 +46,4 @@ export default function componentResolverRoute(section: any, index: number, rout
             </Suspense>) :
             reactElement
     )
-}
-
-function capitalizeFirstLetter(s: string) {
-    return s.charAt(0).toUpperCase() + s.slice(1);
 }

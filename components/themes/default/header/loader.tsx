@@ -1,5 +1,5 @@
 "use client";
-import "./loading.css"
+// import "./loading.css"
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils/utils";
 
@@ -36,7 +36,7 @@ export default function Loader({locale, dicts}: {locale: any, dicts: any}) {
                         <div className="aurora__item"></div>
                     </div>
                 </h1>
-                <p className="subtitle">{dicts && dicts.global.loader.description}.</p>
+                <p className="subtitle">{dicts && dicts?.global?.loader?.description}.</p>
             </div>
         </div>
     );

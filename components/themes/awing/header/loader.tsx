@@ -1,5 +1,4 @@
 "use client";
-import "./loading.css"
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils/utils";
 

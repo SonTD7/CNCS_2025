@@ -2,9 +2,11 @@ import { notFound } from "next/navigation"
 import { LAYOUT_CONFIG } from "@/lib/constants/config";
 import { getByTypeSlug } from "@/lib/api/get-by-type-slug";
 import { populateArticles } from "./helpers";
-import { lazy } from "react";
-
-const Layout = lazy(() => import(`@/components/themes/${LAYOUT_CONFIG}/articles/route`))
+import React from "react";
+import dynamic from "next/dynamic";
+const Layout = dynamic<{
+    children: React.ReactNode
+}>(() => import(`@/components/themes/${LAYOUT_CONFIG}/articles/route`))
 export default async function SlugLayout({
     children,
     params
@@ -20,7 +22,6 @@ export default async function SlugLayout({
     try {
         return <Layout> {children} </Layout>
     } catch (e: any) {
-        // console.log("🚀 ~ e:", e)
         // throw new Error(e)
         notFound()
     }

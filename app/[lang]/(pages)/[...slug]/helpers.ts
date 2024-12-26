@@ -1,3 +1,10 @@
+export type Props = {
+	params: {
+		lang: string
+		slug: string
+	}
+}
+
 export const populatePages = {
 
 	cover: {

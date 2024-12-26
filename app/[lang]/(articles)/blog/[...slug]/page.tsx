@@ -42,8 +42,6 @@ export default async function RootRoute({ params }: Props) {
         )
 
     } catch (error: any) {
-        if (typeof window !== "undefined") {
-            window.alert('Missing or invalid credentials')
-        }
+        typeof window !== "undefined" && window?.alert("Missing or invalid credentials")
     }
 }
