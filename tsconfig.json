@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "gsap.d.ts","**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "**/*.mjs", "components/gradient.js", "postcss.config.mjs", "app/[lang]/(Pages)/(images)/wave-svg.jsx"],
+  "include": ["next-env.d.ts", "gsap.d.ts","**/*.ts", "**/*.tsx", ".next/types/**/*app/[lang]/(apages)/(images)/wave-svg.jsxs", "postcss.config.mjs", "app/[lang]/(Pages)/(images)/wave-svg.jsx"],
   "exclude": ["node_modules"]
 }
