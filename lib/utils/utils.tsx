@@ -1,7 +1,7 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import dynamic from "next/dynamic";
-import { Skeleton } from "@/components/ui/skeleton"
+import { notFound } from "next/navigation";
 
 export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
@@ -36,13 +36,15 @@ export function capitalizeFirstLetter(s: string) {
 }
 
 export function slugToComponentName(slug: string, route: string, data?: any) {
-    const parts = slug.split("-");
-    let componentName: string = "";
-    parts.forEach((s) => {
-        componentName += capitalizeFirstLetter(s);
-    });
-    const FLayout = dynamic<{data?: any}>(
-        () => import(`@/components/${route}/${componentName}`),
+    const FLayout = dynamic<{ data?: any }>(
+        async () => {
+            try {
+                const lazyLayout = await import(`@/components/${route}/${slug}`)
+                return lazyLayout.default;
+            } catch (e) {
+                return notFound()
+            }
+        },
         {
             loading: () => <section className="h-screen w-screen flex justify-center items-center">
                 <button type="button" className="bg-transparent-500 " disabled>
@@ -56,4 +58,5 @@ export function slugToComponentName(slug: string, route: string, data?: any) {
         }
     );
     return FLayout
+
 }

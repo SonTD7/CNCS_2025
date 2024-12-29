@@ -1,5 +1,5 @@
 "use client"
-import { useLanguage } from "@/contexts/LangContext"
+import { useLanguage } from "@/contexts/lang-context"
 import Image from "next/image"
 
 export default function HomeBanner() {

@@ -17,6 +17,8 @@
     }
     html {
         overflow: visible;
+        scroll-behavior: smooth;
+
     }
     body {
         color: var(--foreground);
@@ -26,6 +28,7 @@
     }
     main {
         @apply h-full;
+        scroll-behavior: smooth;
     }
 
     :root {

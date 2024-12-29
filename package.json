@@ -1,5 +1,5 @@
 {
-  "name": "maivietson",
+  "name": "landing-duyson",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -59,8 +59,7 @@
     "swiper": "^11.1.15",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
-    "vaul": "^0.9.2",
-    "whatamesh": "^0.2.0"
+    "vaul": "^0.9.2"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

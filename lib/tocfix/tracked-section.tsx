@@ -1,5 +1,5 @@
 import { HTMLProps, useContext, useEffect, useRef } from "react";
-import { TOCContext } from "@/lib/tocfix/TOCContextType";
+import { TOCContext } from "@/lib/tocfix/toc-context-type";
 import { useScroll } from "framer-motion";
 
 export default function TrackedSection({

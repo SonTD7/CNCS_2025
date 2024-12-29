@@ -1,4 +1,4 @@
-export default function HomeHero() {
+export default function HomeHero({data} : any) {
 	return (
 		<>
 			<div className="relative isolate overflow-hidden bg-gray-900">

@@ -10,13 +10,13 @@ export default function Info() {
 					href="/"
 					className="flex space-x-5 justify-start items-center"
 				>
-					<span className="font-bold capitalize text-xl xl:text-2xl text-indigo-700 dark:text-white flex 1-tracking-widest">
-						<span className="text-5xl font-bold">Lotus </span>
+					<span className="font-bold capitalize text-xl xl:text-2xl text-sprimary-400 dark:text-white flex 1-tracking-widest">
+						<span className="text-5xl font-bold">Logo </span>
 						<span className=" xl:text-lg xl:opacity-40">
 							dev
-						</span>{" "}
+						</span>
 						<span className="1-ml-9 self-end 1text-5xl font-bold  xl:text-4xl">
-							A{" "}
+
 						</span>
 					</span>
 				</Link>

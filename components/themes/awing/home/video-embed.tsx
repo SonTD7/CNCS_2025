@@ -1,6 +1,6 @@
 "use client"
 
-import { useLanguage } from "@/contexts/LangContext"
+import { useLanguage } from "@/contexts/lang-context"
 
 interface VideoEmbedProps {
 	id: number
@@ -46,7 +46,6 @@ export default function VideoEmbed({ data }: { data: VideoEmbedProps }) {
 				<div className="video-embed relative pb-56.25 h-72 lg:h-[600px] overflow-hidden my-8 max-w-6xl mx-auto ">
 					<iframe
 						title="video"
-						loading="lazy"
 						src={embedUrl || ""}
 						width={data.width || "100%"}
 						height={data.height || "100%"}

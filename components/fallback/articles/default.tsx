@@ -1,11 +1,6 @@
-export default function Route() {
+export default function Default() {
     return (
         <>
-            {/* 
-Install the "flowbite-typography" NPM package to apply styles and format the article content: 
-
-URL: https://flowbite.com/docs/components/typography/ 
-*/}
             <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
                 <div className="flex justify-between px-4 mx-auto max-w-screen-xl ">
                     <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
@@ -445,7 +440,7 @@ URL: https://flowbite.com/docs/components/typography/
                                         </p>
                                         <p className="text-sm text-gray-600 dark:text-gray-400">
                                             <time
-                                                
+
                                                 dateTime="2022-02-12"
                                                 title="February 12th, 2022"
                                             >
@@ -538,7 +533,7 @@ URL: https://flowbite.com/docs/components/typography/
                                         </p>
                                         <p className="text-sm text-gray-600 dark:text-gray-400">
                                             <time
-                                                
+
                                                 dateTime="2022-03-12"
                                                 title="March 12th, 2022"
                                             >
@@ -635,7 +630,7 @@ URL: https://flowbite.com/docs/components/typography/
                                         </p>
                                         <p className="text-sm text-gray-600 dark:text-gray-400">
                                             <time
-                                                
+
                                                 dateTime="2022-06-23"
                                                 title="June 23rd, 2022"
                                             >

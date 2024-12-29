@@ -1,6 +1,3 @@
-import { notFound } from "next/navigation"
-import { getByTypeSlug } from "@/lib/api/get-by-type-slug"
-import { populatePages } from "./helpers"
 import { LAYOUT_CONFIG } from "@/lib/constants/config"
 import dynamic from "next/dynamic"
 
@@ -10,7 +7,7 @@ const Layout = dynamic<{
 		lang: string
 		slug: string
 	};
-}>(() => import(`@/components/themes/${LAYOUT_CONFIG}/pages/route`))
+}>(() => import(`@/components/themes/${LAYOUT_CONFIG}/pages/controller`))
 
 export default async function SlugLayout({
 	children,
@@ -22,14 +19,5 @@ export default async function SlugLayout({
 		slug: string
 	}
 }) {
-	const { slug, lang } = params
-	const resData = await getByTypeSlug("/pages", slug, lang, populatePages)
-	resData ?? console.log("🚀 ~ resData:", resData.data[0].attributes.cover.data)
-
-	try {
-		return <Layout params={params}>{children}</Layout>
-	} catch (e: any) {
-		// throw new Error(e)
-		notFound()
-	}
+	return <Layout params={params}>{children}</Layout>
 }

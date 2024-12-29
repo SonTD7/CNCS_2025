@@ -76,6 +76,10 @@ const nextConfig = {
                 protocol: "https",
                 hostname: "**.tailgrids.com",
             },
+            {
+                protocol: "https",
+                hostname: "huongnghiepsongan.com"
+            }
         ],
     },
     webpack(config) {

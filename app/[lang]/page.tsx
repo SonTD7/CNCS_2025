@@ -1,14 +1,15 @@
 import { Metadata } from "next"
-import { FALLBACK_SEO } from "@/lib/constants/fallback"
+import { FALLBACK_SEO, HOME_DATA } from "@/lib/constants/fallback"
 import { getByTypeSlug } from "@/lib/api/get-by-type-slug"
 import componentResolverRoute from "@/lib/utils/component-resolver-route"
-import { populateHomeRe, dataSample, Props, layoutData } from "./helpers"
+import { populateHomeRe, Props } from "./helpers"
 import { slugToComponentName } from "@/lib/utils/utils"
+import { FALLBACK_CONFIG } from "@/lib/constants/config"
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const page = await getByTypeSlug('/pages', params.slug, params.lang);
 
-	if (page ?? !page.data[0]?.seo1) return FALLBACK_SEO;
+	if (page ?? !page?.data?.[0]?.seo1) return FALLBACK_SEO;
 	const metadata = page.data[0].seo
 
 	return {
@@ -26,29 +27,24 @@ export default async function RootRoute({
 
 		const page = await getByTypeSlug("/pages", 'home', params.lang, populateHomeRe)
 
-		if (page.error && page.error.status == 401) {
+		if (page?.error && !FALLBACK_CONFIG) {
+			console.log(`have an error ${page?.error.message} status: ${page?.error.status}for getByTypeSlug`)
 			throw new Error(
-				"Missing or invalid credentials. Have you created an access token using the Strapi admin panel? http://localhost:1337/admin/"
+				page?.error.message
 			)
-			return null
 		}
 
-		const contentSections = page?.data[0]?.attributes?.contentSections
+		const contentSections = page?.data?.[0]?.attributes?.contentSections
 		return contentSections ?
 			contentSections.map((section: any, index: number) =>
 				componentResolverRoute(section, index, "home")
 			) :
-			(
-				<>
-					{
-						layoutData && layoutData.map((item, index) => {
-							const Layout = slugToComponentName(item, "fallback/home", dataSample)
-							return <Layout data={dataSample} key={index} />
-						})
-					}
-				</>
-			)
+			HOME_DATA && HOME_DATA.map(({ name, data }, index) => {
+				const Layout = slugToComponentName(name, "fallback/home", data)
+				return <Layout data={data} key={index} />
+			})
+
 	} catch (error: any) {
-		typeof window !== "undefined" && window?.alert("Missing or invalid credentials")
+		throw new Error(error.message)
 	}
 }

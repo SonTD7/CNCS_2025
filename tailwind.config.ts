@@ -72,7 +72,9 @@ const config: Config = {
     				'4': 'hsl(var(--chart-4))',
     				'5': 'hsl(var(--chart-5))'
     			},
-    			sbglight: '#DFF0FF'
+    			sbglight: '#DFF0FF',
+				sprimary: '#19adb2',
+				"sprimary-400": "#158a8f"
     		},
     		borderRadius: {
     			lg: 'var(--radius)',

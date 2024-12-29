@@ -1,6 +1,6 @@
 "use client"
 
-import { useLanguage } from "@/contexts/LangContext"
+import { useLanguage } from "@/contexts/lang-context"
 
 interface VideoEmbedProps {
 	id: number

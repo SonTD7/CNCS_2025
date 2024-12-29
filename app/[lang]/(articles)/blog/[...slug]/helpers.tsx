@@ -1,3 +1,9 @@
+export interface articleProps {
+    params: {
+		lang: string
+		slug: string
+	}
+}
 export const populateArticles = {
     contentSections: {
         on: {

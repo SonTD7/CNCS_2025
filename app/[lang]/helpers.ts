@@ -1,8 +1,4 @@
-export const layoutData = [
-    "home-banner",
-    "video-embed",
-    "home-hero"
-]
+
 export const dataSample = {
     id: 1,
     url: "https://www.youtube.com/watch?v=Qr7Ng6fpqnk",

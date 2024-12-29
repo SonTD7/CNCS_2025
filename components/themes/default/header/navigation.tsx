@@ -18,9 +18,9 @@ export function Navigation() {
         {/* resolver menu by Name */}
         <Navigate />
         {/* language components */}
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <MobileLang />
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
       </NavigationMenuList>
     </NavigationMenu>
   )

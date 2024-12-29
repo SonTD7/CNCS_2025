@@ -1,9 +1,9 @@
 "use client"
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie"
-import { Vie } from "../languages/Vie";
-import { Us } from "../languages/Us";
-import  {Jp}  from "../languages/Jp";
+import { Vie } from "../languages/vi";
+import { Us } from "../languages/us";
+import  {Jp}  from "../languages/ja";
 
 import DarkMode from "../darkmode/dark-mode";
 

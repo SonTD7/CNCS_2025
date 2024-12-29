@@ -1,5 +1,5 @@
-import Faqs from "./Faqs"
-import Contact from "./Contact"
+import Faqs from "./faqs"
+import Contact from "./contact"
 import ContactSecond from "./contact-second"
 export default function Route({
 	children,

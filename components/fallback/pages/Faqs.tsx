@@ -1,4 +1,4 @@
-import { AccDemo } from "./AccDemo"
+import { AccDemo } from "./acc-demo"
 
 export default function Faqs() {
 	return (

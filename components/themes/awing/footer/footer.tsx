@@ -1,4 +1,4 @@
-import Columns from "./Columns"
+import Columns from "./columns"
 import { dataColumns } from "./helpers"
 import Info from "./info"
 

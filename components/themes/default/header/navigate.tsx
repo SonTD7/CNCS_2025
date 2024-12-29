@@ -1,8 +1,8 @@
 "use client"
 import { useState, useEffect } from "react"
-import Hot from "@/components/themes/default/menu/Hot"
-import Grid from "@/components/themes/default/menu/Grid"
-import Simple from "@/components/themes/default/menu/Simple"
+import Hot from "@/components/themes/default/menu/hot"
+import Grid from "@/components/themes/default/menu/grid"
+import Simple from "@/components/themes/default/menu/simple"
 import { NavigateFake } from "./navigate-fake"
 import { getByTypeSlug } from "@/lib/api/get-by-type-slug"
 

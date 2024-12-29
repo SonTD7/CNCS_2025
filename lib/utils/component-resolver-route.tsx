@@ -1,27 +1,12 @@
 import { ReactElement, lazy, createElement, Suspense } from 'react';
 import Loader from '@/components/themes/default/header/loader';
 import { LAYOUT_CONFIG } from '../constants/config';
-import { capitalizeFirstLetter } from './utils';
 export default function componentResolverRoute(section: any, index: number, route?: string): ReactElement {
 
     // Component names do look like 'category.component-name' => lowercase and kebap case
     const names: string[] = section.__component.split('.')
-
-    // Get category name
     const category = names[0]
-
-    // Get component name
     const component = names[1]
-
-    // Convert the kebap-case name to PascalCase
-    const parts: string[] = component.split('-')
-
-    let componentName = ''
-
-    parts.forEach(s => {
-        componentName += capitalizeFirstLetter(s)
-    })
-
     //console.log(`ComponentResolver: Category => ${category} | Component => ${componentName} | Path => ../components/${componentName}`)
 
     // The path for dynamic imports cannot be fully dynamic.
@@ -32,9 +17,8 @@ export default function componentResolverRoute(section: any, index: number, rout
 
     // Use react lazy loading to import the module. By convention: The file name needs to match the name of the component (what is a good idea)
     let mymodule = route ?
-        lazy(() => import(`@/components/themes/${LAYOUT_CONFIG}/${route}/${componentName}`)) :
-        lazy(() => import(`@/components/themes/${LAYOUT_CONFIG}/${componentName}`))
-
+        lazy(() => import(`@/components/themes/${LAYOUT_CONFIG}/${route}/${component}`)) :
+        lazy(() => import(`@/components/themes/${LAYOUT_CONFIG}/${component}`))
 
     // Create react element. The 'type' argument needs to be a FunctionComponent, not a string
     const reactElement = createElement(mymodule, { data: section, key: index })

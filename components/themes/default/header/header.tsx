@@ -56,7 +56,7 @@ function Header() {
                 "header-main w-full flex justify-between lg:justify-start items-center transition-all top-0 fixed max-h-24 z-30 border-b border-slate-200 border-opacity-25",
                 bg
             )}>
-				<div className="w-full flex space-x-11 justify-between 1lg:justify-start container items-center relative h-24">
+				<div className="w-full flex space-x-11 justify-between 1lg:justify-start scontainer 1container items-center relative h-24">
 					<Link
 						title="Logo"
 						href="/"
@@ -64,16 +64,13 @@ function Header() {
 					>
 						<span
 							className={cn(
-								"font-bold capitalize text-xl xl:text-2xl text-indigo-700 dark:text-white flex 1-tracking-widest",
+								"font-bold capitalize text-xl xl:text-2xl text-sprimary-400 dark:text-white flex 1-tracking-widest",
 								fahkwang.className
 							)}
 						>
-							<span className="text-5xl font-bold">Lotus </span>
+							<span className="text-4xl font-bold">Logo </span>
 							<span className=" xl:text-lg xl:opacity-40">
 								dev
-							</span>{" "}
-							<span className="1-ml-9 self-end 1text-5xl font-bold  xl:text-4xl">
-								A{" "}
 							</span>
 						</span>
 					</Link>

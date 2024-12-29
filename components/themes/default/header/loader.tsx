@@ -28,7 +28,7 @@ export default function Loader({locale, dicts}: {locale: any, dicts: any}) {
         >
             <div className="loader_content">
                 <h1 className="loader_title">
-                    Lotus*A
+                    Landing
                     <div className="aurora">
                         <div className="aurora__item"></div>
                         <div className="aurora__item"></div>

@@ -1,16 +1,14 @@
 import { i18n } from "@/i18n-config"
 import { getDictionary } from "@/dictionaries/get-dictionary"
-import { LanguageProvider } from "@/contexts/LangContext"
+import { LanguageProvider } from "@/contexts/lang-context"
 import { LAYOUT_CONFIG } from "@/lib/constants/config"
-// import { lazy } from "react"
 import dynamic from "next/dynamic"
 
-// const Layout = lazy(() => import(`@/components/themes/${LAYOUT_CONFIG}/route`))
 const Layout = dynamic<{
 	children: React.ReactNode;
 	params?: string;
 	dicts?: string;
-}>(() => import(`@/components/themes/${LAYOUT_CONFIG}/route`))
+}>(() => import(`@/components/themes/${LAYOUT_CONFIG}/controller`))
 
 export default async function RootLayout({
 	children,
