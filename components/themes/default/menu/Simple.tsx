@@ -28,3 +28,4 @@ export default function Simple({data}: Props) {
         </NavigationMenuItem>
     );
 }
+// ok
