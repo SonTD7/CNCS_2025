@@ -1,8 +1,8 @@
 "use client"
 import { useState, useEffect } from "react"
-import Hot from "@/components/themes/default/menu/hot"
-import Grid from "@/components/themes/default/menu/grid"
-import Simple from "@/components/themes/default/menu/simple"
+// import Hot from "@/components/themes/default/menu/hot"
+// import Grid from "@/components/themes/default/menu/grid"
+// import Simple from "@/components/themes/default/menu/simple"
 import { NavigateFake } from "./navigate-fake"
 import { getByTypeSlug } from "@/lib/api/get-by-type-slug"
 
@@ -25,7 +25,7 @@ export function Navigate() {
 		<>
 			<NavigateFake />
 
-			{menuList &&
+			{/* {menuList &&
 				menuList.length !== 0 &&
 				menuList.map((data, index) => {
 					const { layout } = data
@@ -36,7 +36,7 @@ export function Navigate() {
 					) : (
 						<Simple data={data} key={index} />
 					)
-				})}
+				})} */}
 		</>
 	)
 }
