@@ -2,7 +2,7 @@ import Columns from "./columns"
 import { dataColumns } from "./helpers"
 import Info from "./info"
 
-export default function footer() {
+export default function Footer() {
 	return (
 		<footer className="w-full bg-gray-200/[80%] dark:bg-black dark:text-white">
 			<div className="container">

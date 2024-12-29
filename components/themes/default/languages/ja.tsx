@@ -15,4 +15,4 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 )
 const Memo = memo(SvgComponent)
-export { Memo as Jp }
+export { Memo as Ja }
