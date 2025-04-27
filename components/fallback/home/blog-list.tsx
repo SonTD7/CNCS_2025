@@ -5,7 +5,7 @@ export default function BlogList() {
         <div className="scontainer my-8 1container" id="bloglist">
             <div className="text-center">
                 <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl xl:text-5xl">
-                    Blogs
+                    Bài viết
                 </h2>
                 <p className="mt-4 text-base leading-7 text-gray-600 sm:mt-4 lg:mb-8">
                     Enhance your workflow with advanced features

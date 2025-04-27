@@ -9,7 +9,7 @@ export default function BlogDetails() {
                                 <div className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
                                     <img
                                         className="mr-4 w-16 h-16 rounded-full"
-                                        src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                                        src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/480811033_4093123254259160_1088871663329079053_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=1swHw4-bVLIQ7kNvwHkBy2b&_nc_oc=AdkbzNYWPu5xFK-4A15_FFBbg5ChSy6Fx41ovtvOSa8pzcX6pMRUC-AkX9ALXdp6p7RNQCzEwmkjsdnmohCVtjDq&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&_nc_gid=tYAJJ7QXcnaSI5FXc4WcHA&oh=00_AYF6fqO9qTzfn9wKqEOAulg1A2IO7p_9gHU72ctGTj_kPQ&oe=67F49DF4"
                                         alt="Jese Leos"
                                     />
                                     <div>
@@ -18,17 +18,17 @@ export default function BlogDetails() {
                                             rel="author"
                                             className="text-xl font-bold text-gray-900 dark:text-white"
                                         >
-                                            Trân Trân
+                                            Trân Trang
                                         </a>
                                         <p className="text-base text-gray-500 dark:text-gray-400">
-                                            Graphic Designer, educator &amp; CEO CNCS
+                                           Chiến thần content CNCS
                                         </p>
                                         <p className="text-base text-gray-500 dark:text-gray-400">
                                             <time
                                                 dateTime="2022-02-08"
                                                 title="February 8th, 2022"
                                             >
-                                                Feb. 8, 2024
+                                               Ngày 14 tháng 4 năm 2024
                                             </time>
                                         </p>
                                     </div>

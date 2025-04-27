@@ -7,8 +7,7 @@ export default function AboutUs() {
                         <div>
                             {/* <h2 className="text-5xl/snug font-bold text__underline-center">Về Chúng tôi</h2> */}
                             <p className="text-balance mt-4 xl:mt-8">
-                                See the code for this page to see how you can use Astro to simplify
-                                your markup.
+                                Các hoạt động tại CNCS được thiết kế bởi chuyên gia, đảm bảo tính chuyên sâu và ý nghĩa.
                             </p>
                         </div>
                     </div>
@@ -23,12 +22,13 @@ export default function AboutUs() {
                                 </span>
                                 <p className="text-4xl mt-8 tracking-tighter font-semibold text-gray-700 text-balance">
 
-                                    Innovative financial solutions for every situation
+                                    SELF - RETREAT CHĂM NGƯỜI CHĂM SÓC
                                 </p>
                                 <p className="text-sm  mt-4 text-gray-700 text-balance">
 
-                                    Discover a variety of tools, services, and expert guidance
-                                    tailored to your unique financial needs.
+                                    Self-Retreat Chăm Người Chăm Sóc là hành trình nghỉ dưỡng ngắn ngày giúp những người làm nghề giúp đỡ có cơ hội tạm dừng – lắng nghe – phục hồi.
+                                    Mỗi retreat được thiết kế theo một chủ đề riêng biệt, kết hợp giữa kiến thức về sức khỏe tinh thần, thực hành chăm sóc cơ thể và trải nghiệm kết nối với thiên nhiên.
+
                                 </p>
                                 <div className="mt-6 text-xs font-medium grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-2 text-gray-950">
                                     <div className="inline-flex items-center gap-2  text-xs text-gray-700">
@@ -127,7 +127,7 @@ export default function AboutUs() {
                             <div className="h-full md:order-first">
 
                                 <img
-                                    src="https://huongnghiepsongan.com/wp-content/uploads/2022/12/CVGDTVHN.jpg"
+                                    src="/cncswebside1.jpg"
                                     alt="#_"
                                     className=" bg-gray-200 shadow-box shadow-gray-500/30 overflow-hidden aspect-square  w-full h-full object-cover object-center"
                                 />
@@ -142,12 +142,13 @@ export default function AboutUs() {
                                 </span>
                                 <p className="text-4xl mt-8 tracking-tighter font-semibold text-gray-700 text-balance">
 
-                                    Tailored financial solutions for any scenario
+                                    GIÁO DỤC CÙNG CNCS:
+                                    CHĂM MÌNH TRƯỚC, CHĂM NGƯỜI SAU
                                 </p>
                                 <p className="text-sm  mt-4 text-gray-700 text-balance">
 
-                                    Discover a range of financial instruments and personalized advice
-                                    designed to meet your unique requirements.
+                                    Chuỗi hoạt động học tập ngắn, dễ tiếp cận giúp người làm nghề giúp đỡ xây nền vững vàng từ bên trong.
+                                    Tập trung vào kỹ năng tự chăm sóc, quản lý cảm xúc và phòng ngừa kiệt sức – để bạn khỏe, rồi mới giúp người khác tốt hơn.
                                 </p>
                                 <div className="mt-6 text-xs font-medium grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-2 text-gray-950">
                                     <div className="inline-flex items-center gap-2  text-xs text-gray-700">
@@ -260,7 +261,7 @@ export default function AboutUs() {
                             <div className="h-full ">
 
                                 <img
-                                    src="https://huongnghiepsongan.com/wp-content/uploads/2023/11/Career-Retreat-Tai-dinh-huong-su-nghiep.png"
+                                    src="/cncswebside2.jpg"
                                     alt="#_"
                                     className=" bg-gray-200 shadow-box shadow-gray-500/30 overflow-hidden aspect-square  w-full h-full object-cover object-center"
                                 />

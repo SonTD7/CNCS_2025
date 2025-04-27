@@ -25,8 +25,8 @@ function Header() {
 		if (Math.abs(y) > 50) {
 			setBg("!bg-white dark:!bg-black")
 		} else {
-            setBg("bg-white dark:bg-black")
-        }
+			setBg("bg-white dark:bg-black")
+		}
 	})
 
 	return (
@@ -48,15 +48,15 @@ function Header() {
 			}}
 			transition={{ duration: 0.1 }}
 			className={cn(
-                "header-main w-full  flex justify-between lg:justify-start items-center transition-all top-0 fixed max-h-24 z-30",
-                bg
-            )}
+				"header-main w-full  flex justify-between lg:justify-start items-center transition-all top-0 fixed max-h-22 z-30",
+				bg
+			)}
 		>
 			<header className={cn(
-                "header-main w-full flex justify-between lg:justify-start items-center transition-all top-0 fixed max-h-24 z-30 border-b border-slate-200 border-opacity-25",
-                bg
-            )}>
-				<div className="w-full flex space-x-11 justify-between 1lg:justify-start scontainer 1container items-center relative h-24">
+				"header-main w-full flex justify-between lg:justify-start items-center transition-all top-0 fixed max-h-22 z-30 border-b border-slate-200 border-opacity-25",
+				bg
+			)}>
+				<div className="w-full flex space-x-11 justify-between 1lg:justify-start scontainer 1container items-center relative h-auto">
 					<Link
 						title="Logo"
 						href="/"
@@ -68,10 +68,11 @@ function Header() {
 								fahkwang.className
 							)}
 						>
-							<span className="text-4xl font-bold">Logo </span>
-							<span className=" xl:text-lg xl:opacity-40">
-								dev
-							</span>
+							<img
+								src="/logo.png"
+								alt="Logo"
+								className="object-cover object-center w-16 h-4 sm:w-20 sm:h-8 md:w-24 md:h-12 lg:w-32 lg:h-20"
+							/>
 						</span>
 					</Link>
 					{isDesktop ? <Navigation /> : <MobileNavigate />}

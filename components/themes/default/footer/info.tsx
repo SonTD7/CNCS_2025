@@ -10,19 +10,17 @@ export default function Info() {
 					href="/"
 					className="flex space-x-5 justify-start items-center"
 				>
-					<span className="font-bold capitalize text-xl xl:text-2xl text-sprimary-400 dark:text-white flex 1-tracking-widest">
-						<span className="text-5xl font-bold">Logo </span>
-						<span className=" xl:text-lg xl:opacity-40">
-							dev
-						</span>
-						<span className="1-ml-9 self-end 1text-5xl font-bold  xl:text-4xl">
 
-						</span>
-					</span>
+					<img
+						src="/logo.png"
+						alt="Logo"
+						className="object-cover object-center w-16 h-4 sm:w-20 sm:h-8 md:w-24 md:h-12 lg:w-32 lg:h-20"
+					/>
+
+
 				</Link>
 				<p className="py-8 text-sm text-gray-500 lg:max-w-xs text-center lg:text-left">
-					Trusted in more than 100 countries & 5 million customers.
-					Follow us on social media.
+					<strong>Chăm Người Chăm Sóc (CNCS)</strong> – chăm lo cho những người tận tâm chăm sóc. Chúng tôi mang đến dịch vụ sức khỏe toàn diện, dễ tiếp cận, vì người chăm sóc cũng xứng đáng được quan tâm.
 				</p>
 				<div className="flex mt-4 space-x-4 justify-center lg:justify-start sm:mt-0 ">
 					<a
