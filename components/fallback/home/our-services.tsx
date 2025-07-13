@@ -19,7 +19,7 @@ export default function OurServices({ data }: any) {
                         {/* Feature 1 */}
                         <div className="md:p-8 lg:p-14 flex flex-col justify-center items-center">
                             <div className="w-14 h-14 rounded-full bg-purple-200 flex justify-center items-center">
-                                <i className="fa-solid fa-chart-column text-3xl text-gray-900" />
+                                <i className="fa-solid fa-person-walking text-3xl text-gray-900" />
                             </div>
                             <h3 className="mt-12 text-xl font-bold text-gray-900">
                                 HOẠT ĐỘNG
@@ -35,7 +35,7 @@ export default function OurServices({ data }: any) {
                         {/* Feature 2 */}
                         <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center">
                             <div className="w-14 h-14 rounded-full bg-teal-200 flex justify-center items-center">
-                                <i className="fa-solid fa-truck-fast text-3xl text-gray-900" />
+                                <i className="fa-solid fa-book text-3xl text-gray-900" />
                             </div>
                             <h3 className="mt-12 text-xl font-bold text-gray-900">
                                 GIÁO DỤC
@@ -52,7 +52,7 @@ export default function OurServices({ data }: any) {
                         {/* Feature 3 */}
                         <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center">
                             <div className="w-14 h-14 rounded-full bg-yellow-200 flex justify-center items-center">
-                                <i className="fa-solid fa-shield text-3xl text-gray-900" />
+                                <i className="fa-solid fa-handshake text-3xl text-gray-900" />
                             </div>
                             <h3 className="mt-12 text-xl font-bold text-gray-900">
                                 KẾT NỐI CỘNG ĐỒNG

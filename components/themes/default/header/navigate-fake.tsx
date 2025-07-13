@@ -58,49 +58,49 @@ export function NavigateFake() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="#featured" legacyBehavior passHref>
+          <Link href="/#featured" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Nổi bật
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#aboutus" legacyBehavior passHref>
+          <Link href="/#aboutus" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Về chúng tôi
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#services" legacyBehavior passHref>
+          <Link href="/#services" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Dịch vụ
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#bloglist" legacyBehavior passHref>
+          <Link href="/#bloglist" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Bài viết
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#testi" legacyBehavior passHref>
+          <Link href="/#testi" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
             Cảm nhận
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#team" legacyBehavior passHref>
+          <Link href="/#team" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Đội ngũ
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#contact" legacyBehavior passHref>
+          <Link href="/#contact" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Liên hệ
             </NavigationMenuLink>

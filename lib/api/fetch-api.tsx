@@ -7,27 +7,47 @@ export async function fetchAPI(
   options = {}
 ) {
   try {
-    // Merge default and user options
+    // Tạo query string
+    const queryString = qs.stringify(urlParamsObject);
+    const requestUrl = `${getStrapiURL(
+      `/api${path}${queryString ? `?${queryString}` : ""}`
+    )}`;
+
+    // Merge option + header
     const mergedOptions = {
       next: { revalidate: 60 },
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`,
       },
       ...options,
     };
 
-    // Build request URL
-    const queryString = qs.stringify(urlParamsObject);
-    const requestUrl = `${getStrapiURL(
-      // `/api${path}${queryString ? `?${queryString}&populate=*` : ""}`
-      `/api${path}${queryString ? `?${queryString}` : ""}`
-    )}`;
-    // Trigger API call
+    console.log("🔗 Request:", requestUrl);
+
     const response = await fetch(requestUrl, mergedOptions);
+
+    if (!response.ok) {
+      throw new Error(`API returned ${response.status} ${response.statusText}`);
+    }
+
     const data = await response.json();
     return data;
 
   } catch (error) {
-    throw new Error(`Please check if your server is running and you set all the required tokens.`);
+    console.warn("⚠️ API not reachable, using MOCK data instead.", error);
+
+    // Đây là dữ liệu MOCK bạn tự định nghĩa
+    return {
+      data: [
+        {
+          id: 1,
+          attributes: {
+            title: "Mock Title",
+            description: "This is mock content because API failed.",
+          },
+        },
+      ],
+    };
   }
 }

@@ -29,9 +29,7 @@ export default function BlogList() {
                     </Link>
                     <div className="flex flex-col justify-beetween gap-3 px-4 py-2">
                         <p className="text-gray-600 two-lines line-clamp-4">
-                            Writey A.I is an AI tool that generates original, researched blog
-                            posts in minutes, provides content optimization advice, and works with
-                            a plagiarism-free rule.
+                        CHĂM NGƯỜI CHĂM SÓC - HÀNH TRÌNH SỨC KHỎE TOÀN DIỆN VÌ NHỮNG NGƯỜI GIÚP ĐỠ CHUYÊN NGHIỆP
                         </p>
                         <ul className="flex flex-wrap items-center justify-start text-sm gap-2">
                             <li
