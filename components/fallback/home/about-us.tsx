@@ -48,7 +48,7 @@ export default function AboutUs() {
                                         </svg>
                                         <span className="text-gray-950 font-medium text-sm">
 
-                                            Clear data visibility
+                                            Tạm dừng
                                         </span>
                                     </div>
                                     <div className="inline-flex items-center gap-2  text-xs text-gray-700">
@@ -70,7 +70,7 @@ export default function AboutUs() {
                                         </svg>
                                         <span className="text-gray-950 font-medium text-sm">
 
-                                            Reduced external factors
+                                            Lắng nghe
                                         </span>
                                     </div>
                                     <div className="inline-flex items-center gap-2  text-xs text-gray-700">
@@ -99,7 +99,7 @@ export default function AboutUs() {
                                         </svg>
                                         <span className="text-gray-950 font-medium text-sm">
 
-                                            enhanced stabilty
+                                            Hồi phục
                                         </span>
                                     </div>
                                     <div className="inline-flex items-center gap-2  text-xs text-gray-700">
@@ -119,7 +119,7 @@ export default function AboutUs() {
                                         </svg>
                                         <span className="text-gray-950 font-medium text-sm">
 
-                                            accelerated times
+                                            Kết nối
                                         </span>
                                     </div>
                                 </div>
@@ -127,7 +127,7 @@ export default function AboutUs() {
                             <div className="h-full md:order-first">
 
                                 <img
-                                    src="/cncswebside1.jpg"
+                                    src="/cncswebside1.png"
                                     alt="#_"
                                     className=" bg-gray-200 shadow-box shadow-gray-500/30 overflow-hidden aspect-square  w-full h-full object-cover object-center"
                                 />
@@ -155,28 +155,6 @@ export default function AboutUs() {
 
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            className="icon icon-tabler icon-tabler-database text-gray-700 size-4"
-                                            viewBox="0 0 24 24"
-                                            strokeWidth="1.5"
-                                            stroke="currentColor"
-                                            fill="none"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        >
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                            <path d="M12 6m-8 0a8 3 0 1 0 16 0a8 3 0 1 0 -16 0" />
-                                            <path d="M4 6v6a8 3 0 0 0 16 0v-6" />
-                                            <path d="M4 12v6a8 3 0 0 0 16 0v-6" />
-                                        </svg>
-                                        <span className="text-gray-950 font-medium text-sm">
-
-                                            Transparent Data Access
-                                        </span>
-                                    </div>
-                                    <div className="inline-flex items-center gap-2  text-xs text-gray-700">
-
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
                                             className="icon icon-tabler icon-tabler-building text-gray-700 size-4"
                                             viewBox="0 0 24 24"
                                             strokeWidth="1.5"
@@ -197,31 +175,7 @@ export default function AboutUs() {
                                         </svg>
                                         <span className="text-gray-950 font-medium text-sm">
 
-                                            Lowered Interference
-                                        </span>
-                                    </div>
-                                    <div className="inline-flex items-center gap-2  text-xs text-gray-700">
-
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="icon icon-tabler icon-tabler-augmented-reality-2 text-gray-700 size-4"
-                                            viewBox="0 0 24 24"
-                                            strokeWidth="1.5"
-                                            stroke="currentColor"
-                                            fill="none"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        >
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                            <path d="M10 21h-2a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v3.5" />
-                                            <path d="M17 17l-4 -2.5l4 -2.5l4 2.5v4.5l-4 2.5z" />
-                                            <path d="M13 14.5v4.5l4 2.5" />
-                                            <path d="M17 17l4 -2.5" />
-                                            <path d="M11 4h2" />
-                                        </svg>
-                                        <span className="text-gray-950 font-medium text-sm">
-
-                                            Improved Reliability
+                                            Nhận diện
                                         </span>
                                     </div>
                                     <div className="inline-flex items-center gap-2  text-xs text-gray-700">
@@ -253,15 +207,63 @@ export default function AboutUs() {
                                         </svg>
                                         <span className="text-gray-950 font-medium text-sm">
 
-                                            Faster Processing Times
+                                            Kỹ năng
                                         </span>
                                     </div>
+                                    <div className="inline-flex items-center gap-2  text-xs text-gray-700">
+
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="icon icon-tabler icon-tabler-database text-gray-700 size-4"
+                                            viewBox="0 0 24 24"
+                                            strokeWidth="1.5"
+                                            stroke="currentColor"
+                                            fill="none"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        >
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 6m-8 0a8 3 0 1 0 16 0a8 3 0 1 0 -16 0" />
+                                            <path d="M4 6v6a8 3 0 0 0 16 0v-6" />
+                                            <path d="M4 12v6a8 3 0 0 0 16 0v-6" />
+                                        </svg>
+                                        <span className="text-gray-950 font-medium text-sm">
+
+                                            Nền tảng
+                                        </span>
+                                    </div>
+
+                                    <div className="inline-flex items-center gap-2  text-xs text-gray-700">
+
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="icon icon-tabler icon-tabler-augmented-reality-2 text-gray-700 size-4"
+                                            viewBox="0 0 24 24"
+                                            strokeWidth="1.5"
+                                            stroke="currentColor"
+                                            fill="none"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        >
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M10 21h-2a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v3.5" />
+                                            <path d="M17 17l-4 -2.5l4 -2.5l4 2.5v4.5l-4 2.5z" />
+                                            <path d="M13 14.5v4.5l4 2.5" />
+                                            <path d="M17 17l4 -2.5" />
+                                            <path d="M11 4h2" />
+                                        </svg>
+                                        <span className="text-gray-950 font-medium text-sm">
+
+                                            Bền vững
+                                        </span>
+                                    </div>
+
                                 </div>
                             </div>
                             <div className="h-full ">
 
                                 <img
-                                    src="/cncswebside2.jpg"
+                                    src="/cncswebside2.png"
                                     alt="#_"
                                     className=" bg-gray-200 shadow-box shadow-gray-500/30 overflow-hidden aspect-square  w-full h-full object-cover object-center"
                                 />

@@ -41,8 +41,8 @@ export function middleware(request: NextRequest) {
       "/hero.png",
       "/banner.jpg",
       "/logo.png",
-      "/cncswebside1.jpg",
-      "/cncswebside2.jpg",
+      "/cncswebside1.png",
+      "/cncswebside2.png",
       // Your other files in `public`
     ].includes(pathname)
   )
