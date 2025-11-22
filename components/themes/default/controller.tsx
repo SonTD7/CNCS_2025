@@ -23,7 +23,7 @@ export default function Default({
 			)}
 			id="main"
 		>
-			<Loader locale={params.lang} dicts={dicts} />
+			<Loader />
 			<Header />
 			{children}
 			<Footer />

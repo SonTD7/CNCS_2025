@@ -25,7 +25,7 @@ export default function componentResolverRoute(section: any, index: number, rout
 
     return (
         typeof window !== "undefined" ?
-            (<Suspense fallback={<Loader locale={"vi"} dicts={null} />} key={index} >
+            (<Suspense fallback={<Loader />} key={index} >
                 {reactElement}
             </Suspense>) :
             reactElement
