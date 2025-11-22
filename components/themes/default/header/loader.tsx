@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils/utils";
 
@@ -10,13 +9,9 @@ export default function Loader() {
 
   useEffect(() => {
     const handleLoading = () => setIsLoading(false);
-
-    if (document.readyState === "complete") {
-      setIsLoading(false);
-    } else {
-      window.addEventListener("load", handleLoading);
-      return () => window.removeEventListener("load", handleLoading);
-    }
+    if (document.readyState === "complete") setIsLoading(false);
+    else window.addEventListener("load", handleLoading);
+    return () => window.removeEventListener("load", handleLoading);
   }, []);
 
   return (
@@ -28,11 +23,7 @@ export default function Loader() {
     >
       <div className="relative flex flex-col items-center">
         <img src="/logo.png" alt="Logo" className="w-80 animate-float" />
-        <p
-          className="mt-8 text-lg font-semibold tracking-wide relative overflow-hidden
-  bg-gradient-to-r from-[#66c8cc] via-[#66c8cc] to-transparent
-  bg-[200%_auto] bg-clip-text text-transparent animate-fade-slide"
-        >
+        <p className="mt-8 text-lg font-semibold tracking-wide text-transparent">
           Loading...({locale})
         </p>
       </div>
